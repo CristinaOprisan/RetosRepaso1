@@ -9,3 +9,6 @@ myPoint.setx(13);
 myPoint.sety(144);
 console.log(myPoint.getx());
 console.log(myPoint.gety());
+console.log("Distancia al origen: ".concat(myPoint.distanceToOrigin()));
+var anotherPoint = new point_1.Point(0, 0);
+console.log("Distancia a otro punto: ".concat(myPoint.calculateDistance(anotherPoint)));

@@ -14,6 +14,16 @@ exports.Point = void 0;
 // 6. En otro fichero denominado pointTest.ts importar la clase Point.
 // 7. Crear un nuevo objeto myPoint de la clase Point, en el fichero pointTest.ts, y probar todos sus
 // métodos. Subir los cambios a GitHub.
+// Reto 2: Métodos de Distancias
+// 1. Crear un método denominado distanceTolOrigin():number que devuelva la distancia del
+// punto al origen de coordenadas (0,0).
+// NOTA: Buscar en Google la formula para calcular la distancia.
+// 2. Crear un método denominado calculateDistance(anotherPoint:Point):number, que
+// devuelva la distancia entre el punto representado por la instancia actual del objeto y otra
+// instancia de Punto que se recibe como parámetro denominada anotherPoint.
+// NOTA: Buscar en Google la formula para calcular la distancia entre dos puntos.
+// 3. Modificar el fichero pointTest.ts para probar los nuevos métodos
+// 4. Subir los cambios a GitHub.
 var Point = /** @class */ (function () {
     function Point(x, y) {
         this.x = x;
@@ -32,7 +42,15 @@ var Point = /** @class */ (function () {
         return this.y;
     };
     Point.prototype.toString = function () {
-        return '(${this.x},${this.y})';
+        return "".concat(this.x, ",").concat(this.y, ")");
+    };
+    Point.prototype.distanceToOrigin = function () {
+        return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+    };
+    Point.prototype.calculateDistance = function (anotherPoint) {
+        var dx = anotherPoint.getx() - this.x;
+        var dy = anotherPoint.gety() - this.y;
+        return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
     };
     return Point;
 }());
