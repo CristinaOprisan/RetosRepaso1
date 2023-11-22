@@ -24,6 +24,17 @@ exports.Point = void 0;
 // NOTA: Buscar en Google la formula para calcular la distancia entre dos puntos.
 // 3. Modificar el fichero pointTest.ts para probar los nuevos métodos
 // 4. Subir los cambios a GitHub.
+// Reto 3: Método Calcular Cuadrante
+// 1. Programa un método denominado calcularQuadrant():number que devuelva el
+// cuadrante en el que se encuentra el punto.
+// El prototipo del método se muestra a continuación:
+// - Devuelve 0 si x o y son 0.
+// - Devuelve 1 si está en el primer cuadrante (x e y positivos).
+// - Devuelve 2 si está en el segundo cuadrante (x negativo e y positivo).
+// - Devuelve 3 si está en el tercer cuadrante (x e y negativos).
+// - Devuelve 4 si está en el cuarto cuadrante (x positivo e y negativo).
+// 2. Modificar el fichero pointTest.ts para probar este nuevo método.
+// 3. Subir los cambios a GitHub.
 var Point = /** @class */ (function () {
     function Point(x, y) {
         this.x = x;
@@ -51,6 +62,24 @@ var Point = /** @class */ (function () {
         var dx = anotherPoint.getx() - this.x;
         var dy = anotherPoint.gety() - this.y;
         return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+    };
+    Point.prototype.calcularQuadrant = function () {
+        if (this.x === 0 || this.y === 0) {
+            return 0;
+        }
+        else if (this.x > 0 && this.y > 0) {
+            return 1;
+        }
+        else if (this.x < 0 && this.y > 0) {
+            return 2;
+        }
+        else if (this.x < 0 && this.y < 0) {
+            return 3;
+        }
+        else if (this.x > 0 && this.y < 0) {
+            return 4;
+        }
+        return -1;
     };
     return Point;
 }());
