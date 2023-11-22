@@ -1,9 +1,9 @@
 "use strict";
 // Reto 1: Clase Point con Typescript
-// 1. Trabajar en la rama repaso2, crear una nueva carpeta denominada algebraProject y crear el
-// fichero point.ts.
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Point = void 0;
+// 1. Trabajar en la rama repaso2, crear una nueva carpeta denominada algebraProject y crear el
+// fichero point.ts.
 // 2. Dicho fichero debe contener la clase Point con los siguientes atributos privados:
 // • x: number
 // • y: number
@@ -33,6 +33,13 @@ exports.Point = void 0;
 // - Devuelve 2 si está en el segundo cuadrante (x negativo e y positivo).
 // - Devuelve 3 si está en el tercer cuadrante (x e y negativos).
 // - Devuelve 4 si está en el cuarto cuadrante (x positivo e y negativo).
+// 2. Modificar el fichero pointTest.ts para probar este nuevo método.
+// 3. Subir los cambios a GitHub.
+// Reto 4: Calcular el Punto Más Cercano
+// 1. Programa un método denominado calculateNearest(points : Point[]) : Point, que reciba
+// como parámetro un array de objetos de la clase Point y devuelva una referencia al objeto
+// de dicho array que esté más cercano al punto actual.
+// NOTA: Utilizar para ello el método calculateDistance implementado en el reto3.
 // 2. Modificar el fichero pointTest.ts para probar este nuevo método.
 // 3. Subir los cambios a GitHub.
 var Point = /** @class */ (function () {
@@ -80,6 +87,18 @@ var Point = /** @class */ (function () {
             return 4;
         }
         return -1;
+    };
+    Point.prototype.calculateNearest = function (points) {
+        var nearestPoint = points[0];
+        var minDistance = this.calculateDistance(nearestPoint);
+        for (var i = 1; i < points.length; i++) {
+            var currentDistance = this.calculateDistance(points[i]);
+            if (currentDistance < minDistance) {
+                minDistance = currentDistance;
+                nearestPoint = points[i];
+            }
+        }
+        return nearestPoint;
     };
     return Point;
 }());
