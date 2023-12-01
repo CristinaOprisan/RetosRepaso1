@@ -13,7 +13,15 @@ evenNumbers(11);
 // devuelva el array revertido. No se puede utilizar el método revert de la clase array
 // La cabecera de la función tendrá el siguiente aspecto: function myRevert(myArr)
 function myRevert(myArr) {
+    let reversedArr = [];
+    for (let z = 0; z < myArr.length; z++) {
+        reversedArr.unshift(myArr[z]);
+    }
+    return reversedArr;
 }
+let myArray = [1, 2, 3, 4, 5];
+let revArray = myRevert(myArray);
+console.log(revArray);
 // 4. Realizar una función que reciba como parámetro un array de strings que contenga
 // nombres de colores y te imprima en cada caso si el color está en el arcoíris o no.
 // La cabecera de la función tendrá el siguiente aspecto: function isRainbow(colors)

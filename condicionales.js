@@ -1,4 +1,7 @@
+"use strict";
 // Retos de Condicionales
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isEven = void 0;
 // 1. Trabajar en la rama repaso1 .En una carpeta nueva. Ej: retos1. Guarda estos retos en un
 // fichero .js Ej: condicionales.ts
 // 2. Realizar una función que dada una fecha de nacimiento te devuelva el signo zodiacal.
@@ -53,52 +56,52 @@ function continent(country) {
         case 'Spain':
         case 'France':
         case 'Romania':
-            console.log('${country} es un pais de Europe');
+            console.log("".concat(country, " es un pais de Europe"));
             break;
         case 'India':
         case 'China':
         case 'Vietnam':
         case 'Turkey':
         case 'Mongolia':
-            console.log('${country} es un pais de Asia');
+            console.log("".concat(country, " es un pais de Asia"));
             break;
         case 'Fiji':
         case 'New Zealand':
         case 'Australia':
         case 'Samoa':
         case 'Palau':
-            console.log('${country} es un pais de Australia');
+            console.log("".concat(country, " es un pais de Australia"));
             break;
         case 'Nigeria':
         case 'Congo':
         case 'Egypt':
         case 'Algeria':
         case 'Marocco':
-            console.log('${country} es un pais de Africa');
+            console.log("".concat(country, " es un pais de Africa"));
             break;
         case 'United States':
         case 'Mexico':
         case 'Canada':
         case 'Cuba':
         case 'Panama':
-            console.log('${country} es un pais de North America');
+            console.log("".concat(country, " es un pais de North America"));
             break;
         case 'Colombia':
         case 'Brazil':
         case 'Bolivia':
         case 'Paraguay':
         case 'Venezuela':
-            console.log('${country} es un pais de South America');
+            console.log("".concat(country, " es un pais de South America"));
             break;
         case 'Argentina':
         case 'Russia':
         case 'Peru':
         case 'United Kigdon':
         case 'Chile':
-            console.log('${country} es un pais de Antarctica');
+            console.log("".concat(country, " es un pais de Antarctica"));
             break;
         default:
-            console.log('No se encontro el continente');
+            console.log("No se encontro el continente");
     }
     // let europe = ['Germany', 'Italy', 'Spain', 'France', 'Romania'];
     // let asia = ['India', 'China', 'Vietnam', 'Turkey' ,'Mongolia'];
@@ -123,7 +126,7 @@ function continent(country) {
     //     console.log('&{country} es un pais de Antarctica');
     // }
 }
-console.log(continent('Russia'));
+continent('Russia');
 // 4. Realizar una función que te imprima por consola el siguiente mensaje:
 // - “El numero es par”, si el numero introducido como parámetro de entrada es par
 // - “El numero es impar”, si el numero introducido como parámetro de entrada es impar
@@ -136,5 +139,6 @@ function isEven(number) {
         console.log('El numero es impar');
     }
 }
-console.log(isEven(7));
+exports.isEven = isEven;
+isEven(7);
 // 5. Subir los cambios a GitHub.

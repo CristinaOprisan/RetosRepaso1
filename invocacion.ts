@@ -1,4 +1,4 @@
-import { hasEven } from './buclesWhile';
+import { isEven } from './condicionales';
 import { add } from './buclesFor';
 
 
@@ -18,3 +18,13 @@ import { add } from './buclesFor';
 // También tendrás que importar dichos ficheros en el fichero actual.
 
 // Subir los cambios a GitHub. Y hacer merge con la rama principal.
+
+function cristina(array:string[]) {
+    let caracteres = add(array)
+    isEven(caracteres)
+}
+
+// isEven(add(array))
+cristina(['Casa', 'Coche', 'Ciudad', 'Cesta']);
+cristina(['Barco', 'Baca', 'Bicicleta', 'Balon', 'Bisiesto', 'Brasil']);
+cristina(['Venezuela', 'Veneno', 'Voltaje'])

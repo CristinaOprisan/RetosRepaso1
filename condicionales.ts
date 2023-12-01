@@ -50,52 +50,52 @@ function continent(country: string): void{
         case 'Spain':
         case 'France':
         case 'Romania':
-            console.log('${country} es un pais de Europe');
+            console.log(`${country} es un pais de Europe`);
             break;
         case 'India':
         case 'China':
         case 'Vietnam':
         case 'Turkey':
         case 'Mongolia':
-            console.log('${country} es un pais de Asia');
+            console.log(`${country} es un pais de Asia`);
             break;
         case 'Fiji':
         case 'New Zealand':
         case 'Australia':
         case 'Samoa':
         case 'Palau':
-            console.log('${country} es un pais de Australia');
+            console.log(`${country} es un pais de Australia`);
             break;
         case 'Nigeria':
         case 'Congo':
         case 'Egypt':
         case 'Algeria':
         case 'Marocco':
-            console.log('${country} es un pais de Africa');
+            console.log(`${country} es un pais de Africa`);
             break;
         case 'United States':
         case 'Mexico':
         case 'Canada':
         case 'Cuba':
         case 'Panama':
-            console.log('${country} es un pais de North America');
+            console.log(`${country} es un pais de North America`);
             break;
         case 'Colombia':
         case 'Brazil':
         case 'Bolivia':
         case 'Paraguay':
         case 'Venezuela':  
-            console.log('${country} es un pais de South America');
+            console.log(`${country} es un pais de South America`);
             break;
         case 'Argentina':
         case 'Russia':
         case 'Peru':
         case 'United Kigdon':
         case 'Chile':
-            console.log('${country} es un pais de Antarctica');
+            console.log(`${country} es un pais de Antarctica`);
             break;
             default:
-                console.log('No se encontro el continente');
+                console.log(`No se encontro el continente`);
                 
     }
 
@@ -123,7 +123,7 @@ function continent(country: string): void{
     //     console.log('&{country} es un pais de Antarctica');
     // }
 }
-console.log(continent('Russia'));
+continent('Russia');
 
 
 
@@ -132,13 +132,13 @@ console.log(continent('Russia'));
 // - “El numero es impar”, si el numero introducido como parámetro de entrada es impar
 // La cabecera de la función tendrá el siguiente aspecto: function isEven(number)
 
-function isEven(number) {
+export function isEven(number) {
     if (number % 2 === 0) {
         console.log('El numero es par');
     } else {
         console.log('El numero es impar');
     }
 }
-console.log(isEven(7));
+isEven(7);
 
 // 5. Subir los cambios a GitHub.

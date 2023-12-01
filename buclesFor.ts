@@ -19,9 +19,18 @@ evenNumbers(11)
 // devuelva el array revertido. No se puede utilizar el método revert de la clase array
 // La cabecera de la función tendrá el siguiente aspecto: function myRevert(myArr)
 
-function myRevert(myArr: number[]): void{
+function myRevert(myArr: number []){
+    let reversedArr: number [] = [];
+  
+    for (let z = 0; z < myArr.length; z++) {
+      reversedArr.unshift(myArr[z]);
+    }
+    return reversedArr;
+  }
+let myArray: number[] = [1, 2, 3, 4, 5];
+let revArray: number[] = myRevert(myArray)
 
-}
+console.log(revArray);
 
 
 
